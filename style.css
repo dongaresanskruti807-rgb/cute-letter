@@ -1,83 +1,76 @@
-/* Page background */
 body {
-  background: #ffe6f2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffd6e8, #fbcce7);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  color: #444;
   margin: 0;
+  padding: 20px;
 }
 
-/* Title styling */
 .page-title {
-  font-family: 'Dancing Script', cursive;
-  color: #ff4da6;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #ff5fa2;
+  text-shadow: 1px 1px #fff;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.4);
 }
 
-/* Envelope box */
 .envelope {
   position: relative;
-  width: 300px;
-  height: 200px;
-  background: #ffb6c1;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
+  display: inline-block;
+  background: #fff0f5;
+  border: 3px solid #ff9ecb;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
 }
 
-/* Hello Kitty image (top right) */
 .hello-kitty {
   position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 100px;
+  top: -40px;
+  right: -40px;
+  width: 80px;
 }
 
-/* Letter (hidden until button click) */
-.letter {
-  display: none;
-  background: #fff;
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-/* Button styling */
 button {
-  margin-top: 70px;
-  background: #ff69b4;
-  color: white;
+  background-color: #ff9ecb;
   border: none;
-  padding: 12px 24px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 button:hover {
-  background: #ff85c1;
-  transform: scale(1.05);
+  background-color: #ff6ea9;
 }
 
-/* Fade-in animation for letter */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.letter {
+  display: none; /* hidden until button click */
+  margin-top: 20px;
+  text-align: left;
+  padding: 15px;
+  background-color: #fff;
+  border: 2px solid #ffb6d3;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(255, 182, 211, 0.5);
+  max-height: 300px; /* limit height */
+  overflow-y: auto;  /* scroll if too long */
+  white-space: pre-wrap; /* keep your line breaks */
+  line-height: 1.5rem;
 }
 
 @keyframes floatUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-100vh); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
 }
-
-
