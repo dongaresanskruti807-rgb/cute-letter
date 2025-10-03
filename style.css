@@ -1,0 +1,83 @@
+/* Page background */
+body {
+  background: #ffe6f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Comic Sans MS', cursive;
+  margin: 0;
+}
+
+/* Title styling */
+.page-title {
+  font-family: 'Dancing Script', cursive;
+  color: #ff4da6;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.4);
+}
+
+/* Envelope box */
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #ffb6c1;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Hello Kitty image (top right) */
+.hello-kitty {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100px;
+}
+
+/* Letter (hidden until button click) */
+.letter {
+  display: none;
+  background: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Button styling */
+button {
+  margin-top: 70px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Fade-in animation for letter */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+
