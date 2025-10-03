@@ -1,11 +1,11 @@
 function openLetter() {
-  const letter = document.getElementById("letter");
-
-  // Show the letter with fade-in effect
-  letter.style.display = "block";
-
-  // Optional: make floating hearts when letter opens
-  createHearts();
+  const letter = document.getElementById('letter');
+  if (letter.style.display === 'block') {
+    letter.style.display = 'none';
+  } else {
+    letter.style.display = 'block';
+    createHearts(); // 🎀 hearts appear when opening
+  }
 }
 
 function createHearts() {
@@ -15,7 +15,7 @@ function createHearts() {
     heart.style.position = "absolute";
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.fontSize = Math.random() * 24 + 20 + "px";
-    heart.style.animation = "floatUp 3s linear infinite";
+    heart.style.animation = "floatUp 3s linear";
     heart.style.bottom = "0";
 
     document.body.appendChild(heart);
@@ -25,4 +25,3 @@ function createHearts() {
     }, 3000);
   }
 }
-
